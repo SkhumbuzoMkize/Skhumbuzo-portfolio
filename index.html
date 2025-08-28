@@ -293,6 +293,192 @@
       line-height: 1.6;
       color: var(--text-light);
     }
+
+ /* Portfolio Section Styles */
+    #portfolio {
+      background: var(--dark-bg, #1e1e2f);
+      padding: 100px 80px;
+    }
+    
+    .portfolio-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+    
+    .portfolio-title span {
+      color: var(--primary, #00f5d4);
+    }
+    
+    .portfolio-description {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px;
+      color: #ccc;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .portfolio-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      height: 350px;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .portfolio-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 40px rgba(0, 245, 212, 0.4);
+    }
+    
+    .portfolio-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease, filter 0.5s ease;
+    }
+    
+    .portfolio-card:hover img {
+      transform: scale(1.1);
+      filter: brightness(0.4);
+    }
+    
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .portfolio-card:hover .portfolio-overlay {
+      opacity: 1;
+    }
+    
+    .portfolio-overlay h3 {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15ngits px;
+      transform: translateY(20px);
+      transition: transform 0.5s ease;
+    }
+    
+    .portfolio-card:hover .portfolio-overlay h3 {
+      transform: translateY(0);
+    }
+    
+    .portfolio-overlay p {
+      color: #ccc;
+      font-size: 14px;
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      transform: translateY(20px);
+      transition: transform 0.5s ease 0.1s;
+    }
+    
+    .portfolio-card:hover .portfolio-overlay p {
+      transform: translateY(0);
+    }
+    
+    .portfolio-btn {
+      background: #00f5d4;
+      color: #1e1e2f;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transform: translateY(20px);
+      transition: all 0.3s ease 0.2s;
+      border: 2px solid #00f5d4;
+    }
+    
+    .portfolio-card:hover .portfolio-btn {
+      transform: translateY(0);
+    }
+    
+    .portfolio-btn:hover {
+      background: transparent;
+      color: #00f5d4;
+    }
+    
+    /* Different overlay colors for variety */
+    .portfolio-card:nth-child(1) .portfolio-overlay {
+      background: linear-gradient(135deg, rgba(0, 245, 212, 0.8), rgba(30, 30, 47, 0.8));
+    }
+    
+    .portfolio-card:nth-child(2) .portfolio-overlay {
+      background: linear-gradient(135deg, rgba(255, 107, 107, 0.8), rgba(30, 30, 47, 0.8));
+    }
+    
+    .portfolio-card:nth-child(3) .portfolio-overlay {
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.8), rgba(30, 30, 47, 0.8));
+    }
+    
+    .portfolio-card:nth-child(4) .portfolio-overlay {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.8), rgba(30, 30, 47, 0.8));
+    }
+    
+    .portfolio-card:nth-child(5) .portfolio-overlay {
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.8), rgba(30, 30, 47, 0.8));
+    }
+    
+    .portfolio-card:nth-child(6) .portfolio-overlay {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.8), rgba(30, 30, 47, 0.8));
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      #portfolio {
+        padding: 80px 40px;
+      }
+      
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      #portfolio {
+        padding: 60px 20px;
+      }
+      
+      .portfolio-title {
+        font-size: 28px;
+      }
+      
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .portfolio-card {
+        height: 300px;
+      }
+    }
     
     /* Experience Section */
     #experience {
@@ -955,4 +1141,5 @@
   </script>
 </body>
 </html>
+
 
